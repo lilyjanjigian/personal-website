@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;400&display=swap");
+
+.Home-Title {
+  font-family: "Work Sans", sans-serif;
+  font-weight: 400;
+  text-align: left;
+  padding-left: 20px;
+}
+
+.Home-Background {
+  background-color: #f3f0f0;
+  height: 100%;
+  color: #4d1818;
+  align-items: left;
+  justify-items: left;
+}
+
+.Home-TextBox {
+  font-weight: 300;
+  font-size: 30px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 75px;
+  text-align: left;
+  margin-top: 50px;
+  font-family: "Work Sans", sans-serif;
+}
+
+.Home-Text {
+  font-weight: 300;
+  font-size: 30px;
+  text-align: left;
+  margin-top: 25px;
+  font-family: "Work Sans", sans-serif;
+}
+
+.Home-TitleContainer {
+  padding-top: 100px;
+  padding-left: 50px;
+  padding-right: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  width: 100% - 100px; /* 100% minus padding */
+  height: 200px;
+  font-size: 75px;
+  transition: 0.2s;
+  /* height: 100%; */
+  /* position: fixed; /* Fixed Navbar (stay in place on scroll) */
+  /* z-index: 1; /* Stay on top */
+  /* top: 0; /* Stay at the top */
+}
+
+.Home-AvatarContainer {
+  padding: 0;
+}
+
+.Home-Avatar {
+  /* make it responsive */
+  max-width: 100%;
+  width: 150px;
+  height: auto;
+  display: block;
+  /* div height to be the same as width*/
+  padding-top: 100%;
+
+  /* make it a circle */
+  border-radius: 50%;
+
+  /* Centering on image`s center*/
+  background-position-y: center;
+  background-position-x: center;
+  background-repeat: no-repeat;
+
+  /* it makes the clue thing, takes smaller dimension to fill div */
+  background-size: cover;
+
+  /* it is optional, for making this div centered in parent*/
+  margin: 0 auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  background-image: url("../../../dist/senior picture.png");
+}
+
+/* credits to https://alvarotrigo.com/blog/css-animations-scroll/ for reveal stuff below */
+
+.reveal {
+  position: relative;
+  opacity: 0;
+}
+
+.reveal.active {
+  opacity: 1;
+}
+.active.fade-bottom {
+  animation: fade-bottom 1s ease-in;
+}
+.active.fade-left {
+  animation: fade-left 1s ease-in;
+}
+.active.fade-right {
+  animation: fade-right 1s ease-in;
+}
+@keyframes fade-bottom {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes fade-left {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-right {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
